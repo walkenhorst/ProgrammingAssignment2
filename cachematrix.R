@@ -6,6 +6,14 @@
 
 ## Creates a special matrix object that allows caching
 ## of its inverse.
+##
+## Parameters: 
+##   x: a matrix object to be used as the basis of the 
+##      cacheable matrix
+##
+## Returns:
+##  A list containing functions for interacting with
+##  cacheable matrix
 
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
@@ -25,6 +33,13 @@ makeCacheMatrix <- function(x = matrix()) {
 ## Looks to see if the matrix inverse has already been calculated.
 ## If the matrix inverse has already been calculated, it is returned, 
 ## else the matrix inverse is calculated and returned.
+##
+## Parameters: 
+##   x: a cacheable matrix created by calling the 
+##      makeCacheMatrix function.
+##
+## Returns:
+##  The inverse matrix of the matrix x.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
